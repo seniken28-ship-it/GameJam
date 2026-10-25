@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cjgu4tjls8irv"]
+
+[ext_resource type="Script" uid="uid://dltpl511wddfm" path="res://label_main.gd" id="1_a8qw1"]
+
+[node name="Node2D" type="Node2D" unique_id=1737232042]
+script = ExtResource("1_a8qw1")
+metadata/text = ""
+
+[node name="Label" type="Label" parent="." unique_id=1420345838]
+offset_left = 398.0
+offset_top = 235.0
+offset_right = 499.0
+offset_bottom = 258.0
+text = "text text text"
