@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://bl2lebe2rg0ae"]
+[gd_scene load_steps=6 format=3 uid="uid://bl2lebe2rg0ae"]
 
 [ext_resource type="Script" uid="uid://dylemkl01wkpn" path="res://player_controller.gd" id="1_onrkg"]
 [ext_resource type="Texture2D" uid="uid://5qicjpvlh87d" path="res://icon.svg" id="2_i3pqv"]
@@ -8,30 +8,31 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gyfs4"]
 size = Vector2(124, 124)
 
-[node name="Player" type="CharacterBody2D" unique_id=1066630281]
+[node name="Player" type="CharacterBody2D"]
 scale = Vector2(0.846406, 1.08)
 script = ExtResource("1_onrkg")
 speed = 430.0
 deceleration = 0.5
+acceleration = 0.7
 jump_height = 230.0
 jump_time_to_peak = 0.4
 jump_time_to_descent = 0.3
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1510186029]
+[node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("2_i3pqv")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=253590406]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_gyfs4")
 
-[node name="CoyoteTimer" type="Timer" parent="." unique_id=235180325]
+[node name="CoyoteTimer" type="Timer" parent="."]
 wait_time = 0.1
 
-[node name="BufferTImer" type="Timer" parent="." unique_id=1614030983]
+[node name="BufferTImer" type="Timer" parent="."]
 wait_time = 0.1
 
-[node name="Health_component" parent="." unique_id=343728041 instance=ExtResource("3_hqtel")]
+[node name="Health_component" parent="." instance=ExtResource("3_hqtel")]
 
-[node name="hurtbox_component" parent="." unique_id=1413912119 instance=ExtResource("4_sweqy")]
+[node name="hurtbox_component" parent="." instance=ExtResource("4_sweqy")]
 
 [connection signal="timeout" from="CoyoteTimer" to="." method="coyoteTime"]
 [connection signal="timeout" from="BufferTImer" to="." method="jumpBuffer"]
