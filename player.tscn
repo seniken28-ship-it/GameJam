@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cvelufa58w84g" path="res://hurtbox_component.tscn" id="4_sweqy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gyfs4"]
-size = Vector2(124, 124)
+size = Vector2(124, 45.33333)
 
 [node name="Player" type="CharacterBody2D" unique_id=1066630281]
 scale = Vector2(0.846406, 1.08)
@@ -18,9 +18,12 @@ jump_time_to_peak = 0.4
 jump_time_to_descent = 0.3
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1510186029]
+scale = Vector2(1, 0.35532406)
 texture = ExtResource("2_i3pqv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=253590406]
+position = Vector2(0, -0.9259224)
+scale = Vector2(1.0000001, 1.0000001)
 shape = SubResource("RectangleShape2D_gyfs4")
 
 [node name="CoyoteTimer" type="Timer" parent="." unique_id=235180325]
